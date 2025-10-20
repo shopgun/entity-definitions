@@ -10,7 +10,7 @@
     "validate-dashboard": "ajv validate --errors=json -s schemas/dashboard-schema-v1.json -d \"${DEFINITIONS_PATH:-..}/entity-types/*/*dashboard{.stg,}.json\" > /dev/null",
     "validate-relationship-synthesis": "ajv validate --errors=json -s schemas/relationship-synthesis-schema-v1.json -d \"${DEFINITIONS_PATH:-..}/relationships/synthesis/*{.stg,}.yml\" > /dev/null",
     "validate-folders": "node tools/validate_folders.js",
-    "validate-rules": "node tools/validate_rules.js",
+    "validate-rules": "node tools/sjnscythe.js",
     "validate-relationship-synthesis-rules": "node tools/validate_relationship_synthesis_rules.js",
     "validate-uninstrumented-definitions-exists": "node tools/validate_uninstrumented_definitions_exists.js",
     "validate-schemas": "npm run validate-definition && npm run validate-summary-metrics && npm run validate-golden-metrics && npm run validate-dashboard  && npm run validate-relationship-synthesis && npm run validate-folders && npm run validate-uninstrumented-definitions-exists",
